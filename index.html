@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SortMaster Pro By Vivek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <h2 class="brand">SortMaster <span>Pro By Vivek</span></h2>
+        
+            <div class="sidebar-group">
+                <label>Enter Numbers (commas)</label>
+                <input type="text" id="userInput" placeholder="4,2,45,89,6">
+                <button id="initBtn" class="btn-main">Set Array</button>
+            </div>
+
+            <div class="sidebar-group">
+                <label>Algorithm Stats</label>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">Comparisons</span>
+                        <span id="compareCount" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Swaps</span>
+                        <span id="swapCount" class="stat-value">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-group">
+                <label>Overall Progress</label>
+                <div class="progress-wrapper">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+                <p id="progressText" class="small-text">Progress: 0%</p>
+            </div>
+
+            <div class="sidebar-group">
+                <label>Animation Speed</label>
+                <input type="range" id="speedSlider" min="100" max="2000" value="800" step="100">
+                <div class="range-labels">
+                    <span>Fast</span>
+                    <span>Slow</span>
+                </div>
+            </div>
+
+            <div class="sidebar-group">
+                <label>Select Algorithm</label>
+                <button onclick="bubbleSort()" class="btn-algo">Bubble Sort</button>
+                <button onclick="selectionSort()" class="btn-algo">Selection Sort</button>
+                <button onclick="insertionSort()" class="btn-algo">Insertion Sort</button>
+            </div>
+
+            <div class="log-area">
+                <label>Step-by-Step Logs</label>
+                <div id="logPanel" class="terminal"></div>
+            </div>
+
+            <div class="sidebar-footer">
+                <p>Developed by <span>Vivek</span></p>
+                <p class="version">v1.0.2 | 2026</p>
+            </div>
+        </aside>
+
+        <main class="stage">
+            <div class="header-info">
+                <h1 id="passCounter">Pass: 0</h1>
+                <p id="stepDescription">Initialize an array to begin</p>
+            </div>
+
+            <div class="array-display-container">
+                <div id="arraySnapshot" class="array-snapshot">[ ]</div>
+            </div>
+
+            <div id="visualContainer" class="card-container"></div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
